@@ -86,15 +86,15 @@ CenterMouseOnActiveWindow()
 #!^+Del::ReloadChecked()
 #!^+k::CenterMouseOnActiveWindow()
 
-; These are the office keys: T, Y, O, P, D, L, X, N
-;  Teams, Yammer, Office, Powerpoint, onedrive, linkedin, excel, 
+; These are the office keys: T, Y, O, P, D, L, X, N, W
+;  Teams, Yammer, Office, Powerpoint, onedrive, linkedin, excel, word
 
 #!^+r::StartActivateOrCycle("xplorer2_64.exe", "C:\Program Files\zabkat\xplorer2\xplorer2_64.exe")
 #!^+m::Start("ConEmu64.exe", "C:\Tools\cmder_mini\Cmder.exe")
-#!^+c::StartActivateOrCycleTitle("Calculator", "C:\Windows\system32\calc.exe")
+#!^+a::StartActivateOrCycleTitle("Calculator", "C:\Windows\system32\calc.exe")
 #!^+s::StartActivateOrCycle("speedcrunch.exe", "C:\Program Files (x86)\SpeedCrunch\speedcrunch.exe")
 
-#!^+w::Start("chrome.exe", "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe")
+#!^+c::Start("chrome.exe", "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe")
 ;#!^+f::Start("firefox.exe", "C:\Program Files (x86)\Mozilla Firefox\firefox.exe")
 
 ;#!^+o::StartActivateOrCycle("outlook.exe", "C:\Program Files\Microsoft Office\Office16\OUTLOOK.EXE")
