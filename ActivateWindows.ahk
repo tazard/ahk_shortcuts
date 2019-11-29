@@ -84,26 +84,28 @@ CenterMouseOnActiveWindow()
 
 
 #!^+Del::ReloadChecked()
+#!^+k::CenterMouseOnActiveWindow()
 
-#!^+x::StartActivateOrCycle("xplorer2_64.exe", "C:\Program Files\zabkat\xplorer2\xplorer2_64.exe")
+; These are the office keys: T, Y, O, P, D, L, X, N
+;  Teams, Yammer, Office, Powerpoint, onedrive, linkedin, excel, 
+
+#!^+r::StartActivateOrCycle("xplorer2_64.exe", "C:\Program Files\zabkat\xplorer2\xplorer2_64.exe")
 #!^+m::Start("ConEmu64.exe", "C:\Tools\cmder_mini\Cmder.exe")
-#!^+a::StartActivateOrCycleTitle("Calculator", "C:\Windows\system32\calc.exe")
+#!^+c::StartActivateOrCycleTitle("Calculator", "C:\Windows\system32\calc.exe")
 #!^+s::StartActivateOrCycle("speedcrunch.exe", "C:\Program Files (x86)\SpeedCrunch\speedcrunch.exe")
 
-#!^+c::Start("chrome.exe", "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe")
-#!^+f::Start("firefox.exe", "C:\Program Files (x86)\Mozilla Firefox\firefox.exe")
+#!^+w::Start("chrome.exe", "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe")
+;#!^+f::Start("firefox.exe", "C:\Program Files (x86)\Mozilla Firefox\firefox.exe")
 
-#!^+o::StartActivateOrCycle("outlook.exe", "C:\Program Files\Microsoft Office\Office16\OUTLOOK.EXE")
-#!^+w::Start("winword.exe", "C:\Program Files\Microsoft Office\Office16\WINWORD.EXE")
-#!^+e::Start("excel.exe", "C:\Program Files\Microsoft Office\Office16\excel.EXE")
-#!^+p::Start("powerpnt.exe", "C:\Program Files\Microsoft Office\Office16\powerpnt.EXE")
+;#!^+o::StartActivateOrCycle("outlook.exe", "C:\Program Files\Microsoft Office\Office16\OUTLOOK.EXE")
+;#!^+w::Start("winword.exe", "C:\Program Files\Microsoft Office\Office16\WINWORD.EXE")
+;#!^+e::Start("excel.exe", "C:\Program Files\Microsoft Office\Office16\excel.EXE")
+;#!^+p::Start("powerpnt.exe", "C:\Program Files\Microsoft Office\Office16\powerpnt.EXE")
 
-#!^+n::StartActivateOrCycle("notepad++.exe", "C:\Program Files\Notepad++\notepad++.exe")
-#!^+y::StartActivateOrCycle("pycharm64.exe", "C:\Program Files\JetBrains\PyCharm Community Edition 2017.2.3\bin\pycharm64.exe")
-#!^+0::Start("devenv.exe", "C:\Program Files (x86)\Microsoft Visual Studio 10.0\Common7\IDE\devenv.exe")
-#!^+7::Start("devenv.exe", "C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\devenv.exe")
-
-#!^+k::CenterMouseOnActiveWindow()
+;#!^+n::StartActivateOrCycle("notepad++.exe", "C:\Program Files\Notepad++\notepad++.exe")
+;#!^+y::StartActivateOrCycle("pycharm64.exe", "C:\Program Files\JetBrains\PyCharm Community Edition 2017.2.3\bin\pycharm64.exe")
+;#!^+0::Start("devenv.exe", "C:\Program Files (x86)\Microsoft Visual Studio 10.0\Common7\IDE\devenv.exe")
+;#!^+7::Start("devenv.exe", "C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\devenv.exe")
 
 
 ;^F1::StartActivateOrCycle("chrome.exe", "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe")
