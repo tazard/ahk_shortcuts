@@ -9,8 +9,10 @@ return
 
 ;XButton2::  GoSub StartWheeling
 ;~*XButton2 Up::  GoSub StopWheeling
-ScrollLock::  GoSub StartWheeling
-~*ScrollLock Up::  GoSub StopWheeling
+
+; https://autohotkey.com/board/topic/115657-whats-the-purpose-of-the-dollar-sign-in-ahk-script/
+$ScrollLock::  GoSub StartWheeling
+$~*ScrollLock Up::  GoSub StopWheeling
 
 WatchCursor:
 	MouseGetPos, wheelingNewMouseX, wheelingNewMouseY
@@ -32,14 +34,17 @@ WatchCursor:
 return
 
 StartWheeling:
-	SystemCursor("OFF")
-	MouseGetPos, wheelingMouseX, wheelingMouseY
-	SetTimer WatchCursor, %wheelingPeriod%
+	If Not WinActive("ahk_class TscShellContainerClass")
+	{
+		;SystemCursor("OFF")
+		MouseGetPos, wheelingMouseX, wheelingMouseY
+		SetTimer WatchCursor, %wheelingPeriod%
+	}
 return
 
 StopWheeling:
 	SetTimer WatchCursor, Off
-	SystemCursor("ON")
+	;SystemCursor("ON")
     SetScrollLockState Off
 return
 ;===============================================================================================================================================================
