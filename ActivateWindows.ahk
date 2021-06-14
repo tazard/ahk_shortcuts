@@ -88,10 +88,58 @@ StripClipboardFormatting()
 	Clipboard=%Clipboard%   ; will remove formatting
 }
 
+ClipboardForwardifySlashes()
+{
+	if (InStr(Clipboard, "\"))
+	{
+		; Change backslash to forward
+		Clipboard := StrReplace(Clipboard, "\", "/")
+	}
+	else
+	{
+		; No backslashes
+		if (InStr(Clipboard, "//"))
+		{
+			; Has double forward slash, so make back to singles
+			Clipboard := StrReplace(Clipboard, "//", "/")
+		}
+		else
+		{
+			; No double forward slashes either so make doubles
+			Clipboard := StrReplace(Clipboard, "/", "//")
+		}
+	}
+}
+
+ClipboardBackifySlashes()
+{
+	if (InStr(Clipboard, "/"))
+	{
+		; Change forward to backward
+		Clipboard := StrReplace(Clipboard, "/", "\")
+	}
+	else
+	{
+		; No forward slashes
+		if (InStr(Clipboard, "\\"))
+		{
+			; Has double back slash, so make back to singles
+			Clipboard := StrReplace(Clipboard, "\\", "\")
+		}
+		else
+		{
+			; No double back slashes either so make doubles
+			Clipboard := StrReplace(Clipboard, "\", "\\")
+		}
+	}
+}
 
 #!^+Del::ReloadChecked()
 #!^+k::CenterMouseOnActiveWindow()
 #!^+f::StripClipboardFormatting()
+
+#!^+/::ClipboardForwardifySlashes()
+#!^+\::ClipboardBackifySlashes()
 
 ; These are the office keys: T, Y, O, P, D, L, X, N, W
 ;  Teams, Yammer, Office, Powerpoint, onedrive, linkedin, excel, word
