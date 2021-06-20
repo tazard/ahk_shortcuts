@@ -145,6 +145,7 @@ ClipboardBackifySlashes()
 ;  Teams, Yammer, Office, Powerpoint, onedrive, linkedin, excel, word
 
 #!^+c::Start("msedge.exe", "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe")
+#!^+b::Start("brave.exe", "C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe")
 
 ;#!^+r::StartActivateOrCycle("xplorer2_64.exe", "C:\Program Files\zabkat\xplorer2\xplorer2_64.exe")
 ;#!^+m::Start("ConEmu64.exe", "C:\Tools\cmder_mini\Cmder.exe")
