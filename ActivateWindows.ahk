@@ -182,3 +182,8 @@ ClipboardBackifySlashes()
 
 ;^F11::StartActivateOrCycle("calc.exe", "C:\Windows\system32\calc.exe")
 ;^F12::StartActivateOrCycle("SnippingTool.exe", "C:\Windows\system32\SnippingTool.exe")
+
+; Insert today's date (type 't' then 'd')
+::td::
+SendInput {Sleep 10}%A_YYYY%-%A_MM%-%A_DD%
+return
