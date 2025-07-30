@@ -2,7 +2,7 @@
 #SingleInstance Force
 SetWorkingDir A_ScriptDir
 
-global wheelingSensitivity := 5
+global wheelingSensitivity := 1
 global wheelingPeriod := 1
 global wheelingMouseX := 0
 global wheelingMouseY := 0
@@ -23,7 +23,6 @@ StartWheeling() {
 
 StopWheeling() {
     SetTimer WatchCursor, 0
-    ;SetScrollLockState "Off"
 }
 
 WatchCursor(*) {
